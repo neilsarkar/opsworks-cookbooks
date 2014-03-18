@@ -1,0 +1,5 @@
+name        "hello"
+description "Hello World"
+maintainer  "Neil Sarkar"
+license     "WTFPL"
+version     "1.0.0"
