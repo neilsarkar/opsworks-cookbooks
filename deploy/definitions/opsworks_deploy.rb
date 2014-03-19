@@ -10,6 +10,8 @@ define :opsworks_deploy do
     recursive true
   end
 
+  raise deploy.inspect
+
   if deploy[:scm]
     ensure_scm_package_installed(deploy[:scm][:scm_type])
 
