@@ -1,8 +1,11 @@
 include_recipe 'deploy'
 include_recipe "nginx::service"
 
+Chef::Log.info("Node:")
+Chef::Log.warn(node.inspect)
+
 node[:deploy].each do |application, deploy|
-  if deploy[:application_type] != 'static'
+  if false && deploy[:application_type] != 'static'
     Chef::Log.debug("Skipping deploy::web application #{application} as it is not an static HTML app")
     next
   end
