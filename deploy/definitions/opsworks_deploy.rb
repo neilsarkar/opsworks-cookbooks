@@ -10,6 +10,8 @@ define :opsworks_deploy do
     recursive true
   end
 
+  Chef::Log.warn deploy.inspect
+
   if deploy[:scm]
     ensure_scm_package_installed(deploy[:scm][:scm_type])
 
